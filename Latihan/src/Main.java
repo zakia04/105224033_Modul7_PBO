@@ -8,19 +8,15 @@ public class Main {
         for (PerangkatPintar p : daftar) {
             p.aktifkan();
             //no 4
-            if (p instanceof AcPintar){
-                ((AcPintar) p).aturSuhu(22);
+            if (p instanceof AcPintar){ // kode menggunakan operator instanceof 
+                ((AcPintar) p).aturSuhu(22); //kode menggunakan downcasting
             }
             
         }
-
         PerangkatPintar alat1 = new LampuPintar();
-        LampuPintar alat2 = (LampuPintar) alat1; //perbaikan kode menggunakan downcasting
-        alat2.aturKecerahan(75, "Putih"); //outputnya akan menjadi level 75 dan warna cahaya putih
-        
+        ((LampuPintar) alat1).aturKecerahan(75, "Putih"); //perbaikan kode menggunakan downcasting
     }
 }
-
 
 
 /* no 3 =
